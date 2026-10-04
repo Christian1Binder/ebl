@@ -16,9 +16,9 @@ function render(){
   const heading=root.querySelector('h1');document.title=`${heading?.textContent||'Lernraum'} · EBL`;
 }
 async function saveOpenNote(){const note=document.getElementById('lesson-note');if(!note)return;const parts=lastHash.replace(/^#\/?/,'').split('/'),lid=parts[2];if(lid&&note.value!==(store.state.notes[lid]||''))await store.mutate(s=>s.notes[lid]=note.value);}
-async function route(){if(!ready)return;const ticket=++routeCounter;try{await saveOpenNote();if(ticket!==routeCounter)return;render();lastHash=location.hash;window.scrollTo(0,0);root.focus({preventScroll:true});}catch(error){toast(error.message);}}
+async function route(){if(!ready)return;if(document.querySelector('#lesson-form[data-dirty="true"]')){history.replaceState(null,'',lastHash||'#/editor');toast('Speichere deine offenen Editoränderungen, bevor du die Seite verlässt.');return;}const ticket=++routeCounter;try{await saveOpenNote();if(ticket!==routeCounter)return;render();lastHash=location.hash;window.scrollTo(0,0);root.focus({preventScroll:true});}catch(error){toast(error.message);}}
 document.getElementById('menu-toggle').onclick=()=>{const open=document.getElementById('navigation').classList.toggle('open');document.getElementById('menu-toggle').setAttribute('aria-expanded',String(open));};
-document.getElementById('account-button').onclick=()=>accountDialog(render);
+document.getElementById('account-button').onclick=async()=>{try{await saveOpenNote();accountDialog(render);}catch(error){toast(error.message);}};
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#/"]');if(!a)return;const dirty=document.querySelector('#lesson-form[data-dirty="true"]');if(dirty){e.preventDefault();const d=modal('Offene Änderungen',`<p>Speichere deine Änderungen im Inhaltseditor, bevor du die Seite verlässt.</p><button class="button" data-dismiss>Zurück zum Editor</button>`);d.querySelector('[data-dismiss]').onclick=()=>d.close();}},true);
 window.addEventListener('beforeunload',e=>{const note=document.getElementById('lesson-note'),lid=lastHash.replace(/^#\/?/,'').split('/')[2];if(document.querySelector('#lesson-form[data-dirty="true"]')||(note&&note.value!==(store.state.notes[lid]||''))){e.preventDefault();e.returnValue='';}});
 window.addEventListener('hashchange',route);
