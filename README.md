@@ -61,7 +61,7 @@ Die GitHub-Action prüft JavaScript und Datenformat, PHP-Syntax, die API gegen M
 
 ## Veröffentlichung
 
-Die Action `.github/workflows/pages.yml` veröffentlicht nach bestandenen Prüfungen. GitHub Pages muss einmalig unter **Settings → Pages → Source: GitHub Actions** aktiviert sein. Geplante Adresse: https://christian1binder.github.io/ebl/.
+GitHub Pages ist aktiviert. Die Action `.github/workflows/pages.yml` veröffentlicht nach bestandenen Prüfungen und kontrolliert die live erreichbaren Dateien. Der Branch `gh-pages` enthält zusätzlich das geprüfte statische Veröffentlichungspaket. Adresse: https://christian1binder.github.io/ebl/.
 
 ## Dokumentation
 

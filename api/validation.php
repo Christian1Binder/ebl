@@ -3,15 +3,18 @@ declare(strict_types=1);
 function validate_catalog(mixed $data): void {
     if(!$data instanceof stdClass||($data->schemaVersion??null)!==1||!is_array($data->courses??null)||count($data->courses)<1||count($data->courses)>200)fail('Ungültiger EBL-Katalog.');
     $ids=[];
+    $textFields=function($o,$fields){foreach($fields as $field)if(isset($o->$field)&&!is_string($o->$field))fail($field.' muss Text sein.');};
+    $sources=function($list){if($list===null)return;if(!is_array($list)||count($list)>500)fail('Ungültige Quellenliste.');foreach($list as $s){if(!is_string($s->title??null)||!is_string($s->url??null)||!filter_var($s->url,FILTER_VALIDATE_URL)||!in_array(strtolower(parse_url($s->url,PHP_URL_SCHEME)??''),['http','https'],true))fail('Quellen benötigen title und eine HTTP(S)-URL.');}};
+    $sources($data->resources??null);
     $identify=function($o)use(&$ids){if(!$o instanceof stdClass||!is_string($o->id??null)||!preg_match('/^[a-zA-Z0-9_-]{1,100}$/D',$o->id)||isset($ids[$o->id])||!is_string($o->title??null)||!trim($o->title)||mb_strlen($o->title)>250)fail('Titel oder eindeutige ID ist ungültig.');$ids[$o->id]=true;};
-    foreach($data->courses as $c){$identify($c);if(!is_array($c->modules??null)||count($c->modules)>100)fail('Ungültige Module.');
+    foreach($data->courses as $c){$identify($c);$textFields($c,['description','category','color','symbol','status']);if(!is_array($c->modules??null)||count($c->modules)>100)fail('Ungültige Module.');
         foreach($c->modules as $m){$identify($m);if(!is_array($m->lessons??null)||count($m->lessons)>200)fail('Ungültige Lektionen.');
-            foreach($m->lessons as $l){$identify($l);if(!is_string($l->content??null)||mb_strlen($l->content)>100000)fail('Ungültiger Lektionstext.');
+            foreach($m->lessons as $l){$identify($l);$textFields($l,['description','reflection']);$sources($l->sources??null);if(isset($l->minutes)&&(!is_numeric($l->minutes)||$l->minutes<1||$l->minutes>600))fail('Ungültige Lesezeit.');if(!is_string($l->content??null)||mb_strlen($l->content)>100000)fail('Ungültiger Lektionstext.');
                 if(isset($l->flashcards)){if(!is_array($l->flashcards)||count($l->flashcards)>500)fail('Ungültige Karteikarten.');foreach($l->flashcards as $f)if(!is_string($f->q??null)||!is_string($f->a??null))fail('Karteikarten benötigen q und a.');}
                 if(isset($l->quiz)){
                     $quiz=$l->quiz;$questions=$quiz->questions??null;
                     if(!is_array($questions)||count($questions)>100||!is_int($quiz->passingScore??null)||$quiz->passingScore<1||$quiz->passingScore>count($questions))fail('Ungültiger Wissenscheck oder passingScore.');
-                    foreach($questions as $q){$identify($q);if(!in_array($q->type??null,['single','multiple'],true)||!is_array($q->answers??null)||count($q->answers)<2||count($q->answers)>10)fail('Ungültiger Fragetyp oder Antworten.');$correct=0;$answers=[];
+                    foreach($questions as $q){$identify($q);$textFields($q,['explanation']);if(!in_array($q->type??null,['single','multiple'],true)||!is_array($q->answers??null)||count($q->answers)<2||count($q->answers)>10)fail('Ungültiger Fragetyp oder Antworten.');$correct=0;$answers=[];
                         foreach($q->answers as $a){if(!is_string($a->id??null)||isset($answers[$a->id])||!is_string($a->text??null)||!trim($a->text)||!is_bool($a->isCorrect??null))fail('Ungültige Antwort.');$answers[$a->id]=true;if($a->isCorrect)$correct++;}
                         if(!$correct||($q->type==='single'&&$correct!==1))fail('Falsche Anzahl korrekter Antworten.');
                     }

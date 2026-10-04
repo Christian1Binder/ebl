@@ -72,14 +72,20 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v5
       - name: Lernplattform veröffentlichen
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Veröffentlichte Dateien kontrollieren
+        env:
+          EBL_LIVE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node tests/live.mjs

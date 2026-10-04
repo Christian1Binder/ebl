@@ -8,17 +8,24 @@ export function validateCatalog(data) {
     if (typeof o.title !== 'string' || !o.title.trim() || o.title.length > 250) throw new Error(`${label}: Titel fehlt oder ist zu lang.`);
   };
   if (data.courses.length > 200) throw new Error('Maximal 200 Kurse pro Katalog.');
+  const textFields=(o,fields)=>{for(const field of fields)if(o[field]!==undefined&&typeof o[field]!=='string')throw new Error(`${field} muss Text sein.`);};
+  const sources=list=>{if(list!==undefined&&(!Array.isArray(list)||list.length>500||list.some(s=>!s||typeof s.title!=='string'||typeof s.url!=='string'||!safeURL(s.url))))throw new Error('Quellen benötigen title und eine gültige HTTP(S)-URL.');};
+  sources(data.resources);
   for (const c of data.courses) {
     identify(c,'Kurs');
+    textFields(c,['description','category','color','symbol','status']);
     if (!Array.isArray(c.modules) || c.modules.length > 100) throw new Error('Kurse benötigen ein modules-Array (maximal 100).');
     for (const m of c.modules) {
       identify(m,'Modul');
       if (!Array.isArray(m.lessons) || m.lessons.length > 200) throw new Error('Module benötigen ein lessons-Array (maximal 200).');
       for (const l of m.lessons) {
         identify(l,'Lektion');
+        textFields(l,['description','reflection']);sources(l.sources);
+        if(l.minutes!==undefined&&(!Number.isFinite(l.minutes)||l.minutes<1||l.minutes>600))throw new Error('Lesezeit muss zwischen 1 und 600 Minuten liegen.');
         if (typeof l.content !== 'string' || l.content.length > 100000) throw new Error('Lektion: content muss Text sein (maximal 100.000 Zeichen).');
         for (const q of l.quiz?.questions ?? []) {
           identify(q,'Frage');
+          textFields(q,['explanation']);
           if (!['single','multiple'].includes(q.type)) throw new Error('Fragetyp muss single oder multiple sein.');
           if (!Array.isArray(q.answers) || q.answers.length < 2 || q.answers.length > 10) throw new Error('Fragen benötigen 2 bis 10 Antworten.');
           const answerIds = new Set();
@@ -30,7 +37,7 @@ export function validateCatalog(data) {
           if (!correct || (q.type === 'single' && correct !== 1)) throw new Error('Single-Fragen benötigen genau eine richtige Antwort; Multiple-Fragen mindestens eine.');
         }
         if (l.quiz && (!Array.isArray(l.quiz.questions) || !Number.isInteger(l.quiz.passingScore) || l.quiz.passingScore < 1 || l.quiz.passingScore > l.quiz.questions.length)) throw new Error('passingScore ist die Mindestzahl richtiger Fragen.');
-        if (l.flashcards && (!Array.isArray(l.flashcards) || l.flashcards.some(f=>typeof f.q !== 'string'||typeof f.a !== 'string'))) throw new Error('Karteikarten benötigen q und a als Text.');
+        if (l.flashcards!==undefined && (!Array.isArray(l.flashcards) || l.flashcards.length>500 || l.flashcards.some(f=>!f||typeof f.q !== 'string'||typeof f.a !== 'string'))) throw new Error('Karteikarten benötigen q und a als Text.');
       }
     }
   }
