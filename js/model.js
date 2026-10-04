@@ -3,7 +3,7 @@ export function validateCatalog(data) {
   if (!data || data.schemaVersion !== 1 || !Array.isArray(data.courses) || !data.courses.length) throw new Error('Erwartet wird ein EBL-Katalog mit schemaVersion 1 und courses.');
   const ids = new Set();
   const identify = (o, label) => {
-    if (typeof o.id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(o.id) || ids.has(o.id)) throw new Error(`${label}: IDs müssen eindeutig sein und dürfen nur Buchstaben, Ziffern, _ und - enthalten.`);
+    if (typeof o.id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(o.id) || Object.hasOwn(Object.prototype,o.id) || ids.has(o.id)) throw new Error(`${label}: IDs müssen eindeutig sein und dürfen nur Buchstaben, Ziffern, _ und - enthalten; reservierte Objektnamen sind ausgeschlossen.`);
     ids.add(o.id);
     if (typeof o.title !== 'string' || !o.title.trim() || o.title.length > 250) throw new Error(`${label}: Titel fehlt oder ist zu lang.`);
   };
