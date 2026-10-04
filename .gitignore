@@ -1,6 +1,0 @@
-node_modules/
-.env
-api/config.local.php
-storage/
-test-results/
-_site/
