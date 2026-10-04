@@ -1,0 +1,1438 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "title": "EBL Lernraum",
+  "description": "Ergänzender Lernraum für Soziale Arbeit. Startinhalte und erfundene Übungen; kein offizieller Modulplan der TH Nürnberg.",
+  "courses": [
+    {
+      "id": "soziale-arbeit",
+      "title": "Soziale Arbeit verstehen",
+      "category": "Grundausbildung",
+      "description": "Profession, Haltung und dein erster Blick auf die Praxis.",
+      "color": "sage",
+      "symbol": "◎",
+      "status": "starter",
+      "modules": [
+        {
+          "id": "soziale-arbeit-basis",
+          "title": "Grundlagen & Lerntransfer",
+          "lessons": [
+            {
+              "id": "soziale-arbeit-1",
+              "title": "Eine Profession mit Perspektive",
+              "description": "Soziale Arbeit verbindet die Arbeit mit Menschen und die Auseinandersetzung mit gesellschaftlichen Bedingungen. Als Lernfrage hilft: Was liegt in der Situation einer Person, was in den Bedingungen ihres Umfelds?",
+              "order": 1,
+              "minutes": 8,
+              "content": "Soziale Arbeit verbindet die Arbeit mit Menschen und die Auseinandersetzung mit gesellschaftlichen Bedingungen. Als Lernfrage hilft: Was liegt in der Situation einer Person, was in den Bedingungen ihres Umfelds?\n\n## Denkübung\nEine Jugendliche fehlt häufig in der OGS. Formuliere zwei mögliche persönliche und zwei mögliche strukturelle Erklärungen. Behandle sie als Hypothesen, nicht als feststehende Tatsachen.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "IFSW · Definition Sozialer Arbeit",
+                  "url": "https://www.ifsw.org/what-is-social-work/global-definition-of-social-work/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche zwei Ebenen solltest du bei einem Fall betrachten?",
+                  "a": "Die Situation der Person und die Bedingungen ihres Umfelds."
+                }
+              ],
+              "quiz": {
+                "id": "soziale-arbeit-1-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "soziale-arbeit-1-q1",
+                    "title": "Was erweitert den Blick auf einen Fall?",
+                    "type": "single",
+                    "explanation": "Persönliche und gesellschaftliche Aspekte zusammenzudenken eröffnet zusätzliche Perspektiven.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Person und Lebensbedingungen gemeinsam betrachten",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Nur das Verhalten bewerten",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Sofort eine Diagnose stellen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "soziale-arbeit-2",
+              "title": "Haltung vor schnellen Antworten",
+              "description": "Eine professionelle Haltung beginnt mit der Frage, welche Annahmen du in eine Situation mitbringst. Ein erster Eindruck ist noch keine begründete Einschätzung.",
+              "order": 2,
+              "minutes": 8,
+              "content": "Eine professionelle Haltung beginnt mit der Frage, welche Annahmen du in eine Situation mitbringst. Ein erster Eindruck ist noch keine begründete Einschätzung.\n\n## Drei Perspektiven\n- Beobachtung: Was habe ich wahrgenommen?\n- Deutung: Wie erkläre ich mir das?\n- Offene Frage: Welche Information fehlt?\n\n## Praxisimpuls\nAus „Der Schüler ist unmotiviert“ wird: „Er hat heute nach zehn Minuten das Arbeitsblatt weggelegt.“ Die zweite Formulierung macht eine konkrete Beobachtung sichtbar.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "IFSW · Ethische Prinzipien",
+                  "url": "https://www.ifsw.org/global-social-work-statement-of-ethical-principles/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Wie trennst du Beobachtung und Deutung?",
+                  "a": "Beschreibe zuerst die konkrete Handlung; kennzeichne deine Erklärung als Interpretation."
+                }
+              ],
+              "quiz": {
+                "id": "soziale-arbeit-2-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "soziale-arbeit-2-q1",
+                    "title": "Welche Aussage beschreibt eine Beobachtung?",
+                    "type": "single",
+                    "explanation": "Eine beobachtbare Handlung ist von einer wertenden Deutung zu unterscheiden.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Er ist respektlos",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Er hat das Blatt nach zehn Minuten weggelegt",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Er will nie lernen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "soziale-arbeit-3",
+              "title": "Ressourcen sichtbar machen",
+              "description": "Ein Ressourcenblick fragt neben Schwierigkeiten auch nach Fähigkeiten, Beziehungen und unterstützenden Bedingungen. Das bedeutet nicht, Probleme zu verharmlosen.",
+              "order": 3,
+              "minutes": 8,
+              "content": "Ein Ressourcenblick fragt neben Schwierigkeiten auch nach Fähigkeiten, Beziehungen und unterstützenden Bedingungen. Das bedeutet nicht, Probleme zu verharmlosen.\n\n## Eigene Ressourcenkarte\nNotiere für einen erfundenen Fall drei Felder: Was kann die Person? Wer unterstützt sie? Welche Angebote sind erreichbar? Halte fehlende Informationen als Fragen fest.\n\n## Transfer\nWelche Fähigkeit eines Kindes wird im Schulalltag leicht übersehen, weil seine Schwierigkeiten mehr Aufmerksamkeit bekommen?",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "IFSW · Definition Sozialer Arbeit",
+                  "url": "https://www.ifsw.org/what-is-social-work/global-definition-of-social-work/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was bedeutet Ressourcenorientierung in dieser Übung?",
+                  "a": "Fähigkeiten, Beziehungen und unterstützende Rahmenbedingungen bewusst erfassen."
+                }
+              ],
+              "quiz": {
+                "id": "soziale-arbeit-3-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "soziale-arbeit-3-q1",
+                    "title": "Was gehört in eine Ressourcenkarte?",
+                    "type": "single",
+                    "explanation": "Die Übung macht Stärken und erreichbare Unterstützung sichtbar.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Nur Fehlverhalten",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Fähigkeiten und unterstützende Beziehungen",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Eine Liste aller Sanktionen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "soziale-arbeit-4",
+              "title": "Beteiligung im Arbeitsalltag",
+              "description": "Beteiligung wird konkret, wenn Menschen Einfluss auf Entscheidungen erhalten, die sie betreffen. Die Übung hier fragt nach dem tatsächlichen Entscheidungsspielraum.",
+              "order": 4,
+              "minutes": 8,
+              "content": "Beteiligung wird konkret, wenn Menschen Einfluss auf Entscheidungen erhalten, die sie betreffen. Die Übung hier fragt nach dem tatsächlichen Entscheidungsspielraum.\n\n## Fallbeispiel\nEine OGS-Gruppe darf über den Namen eines Projekts abstimmen. Inhalt und Ablauf sind schon festgelegt. Zeichne auf: Was ist offen? Was steht fest? Wie wurde das kommuniziert?\n\n## Reflexion\nEine transparente Begrenzung ist verständlicher als eine vermeintlich offene Entscheidung, deren Ergebnis bereits feststeht.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "IFSW · Ethische Prinzipien",
+                  "url": "https://www.ifsw.org/global-social-work-statement-of-ethical-principles/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Woran erkennst du einen Beteiligungsspielraum?",
+                  "a": "An den Entscheidungen, deren Ergebnis noch offen ist und beeinflusst werden kann."
+                }
+              ],
+              "quiz": {
+                "id": "soziale-arbeit-4-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "soziale-arbeit-4-q1",
+                    "title": "Welche Frage prüft tatsächliche Beteiligung?",
+                    "type": "single",
+                    "explanation": "Entscheidend ist, worauf die Beteiligten tatsächlich Einfluss haben.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Wie dekorativ ist die Abstimmung?",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Welche Entscheidung ist wirklich offen?",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Wie schnell stimmen alle zu?",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "soziale-arbeit-5",
+              "title": "Dein persönlicher Theorie-Praxis-Transfer",
+              "description": "Theorien dienen in diesem Lernraum als Perspektiven, mit denen du eine Situation befragen kannst. Eine Theorie ist keine fertige Handlungsanweisung für jeden Einzelfall.",
+              "order": 5,
+              "minutes": 12,
+              "content": "Theorien dienen in diesem Lernraum als Perspektiven, mit denen du eine Situation befragen kannst. Eine Theorie ist keine fertige Handlungsanweisung für jeden Einzelfall.\n\n## Reflexionsraster\n- Situation knapp und anonym beschreiben.\n- Einen Begriff aus dem Kurs auswählen.\n- Eine neue Frage an die Situation formulieren.\n- Grenzen dieser Perspektive benennen.\n\n## Lernjournal\nSchreibe einen Absatz: Was sehe ich nach der Beschäftigung mit dem Begriff anders? Nutze die privaten Notizen unter der Lektion.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "IFSW · Definition Sozialer Arbeit",
+                  "url": "https://www.ifsw.org/what-is-social-work/global-definition-of-social-work/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche vier Schritte helfen beim Transfer?",
+                  "a": "Situation, theoretischer Begriff, neue Frage und Grenzen der Perspektive."
+                }
+              ],
+              "quiz": {
+                "id": "soziale-arbeit-5-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "soziale-arbeit-5-q1",
+                    "title": "Was macht einen Theorie-Praxis-Transfer nachvollziehbar?",
+                    "type": "single",
+                    "explanation": "Die Verbindung und ihre Grenzen müssen nachvollziehbar werden.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Eine Meinung ohne Begründung",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Begriff, Situation und Grenzen miteinander verbinden",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Die Theorie als immer gültige Lösung anwenden",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kinderrechte",
+      "title": "Kinderrechte im Schulalltag",
+      "category": "Schule & OGS",
+      "description": "Rechte verstehen, Alltagssituationen befragen und Beteiligung reflektieren.",
+      "color": "clay",
+      "symbol": "✳",
+      "status": "starter",
+      "modules": [
+        {
+          "id": "kinderrechte-basis",
+          "title": "Grundlagen & Lerntransfer",
+          "lessons": [
+            {
+              "id": "kinderrechte-1",
+              "title": "Kinder als Träger eigener Rechte",
+              "description": "Die Kinderrechtskonvention betrachtet Kinder als Personen mit eigenen Rechten. Für die Praxis entsteht daraus eine Leitfrage: Wie wird die Perspektive des Kindes in einer Situation sichtbar?",
+              "order": 1,
+              "minutes": 8,
+              "content": "Die Kinderrechtskonvention betrachtet Kinder als Personen mit eigenen Rechten. Für die Praxis entsteht daraus eine Leitfrage: Wie wird die Perspektive des Kindes in einer Situation sichtbar?\n\n## Gedankenexperiment\nEine Regel erleichtert den Arbeitsalltag der Erwachsenen, wird von Kindern aber als ungerecht erlebt. Beschreibe zunächst beide Perspektiven. Welche Informationen brauchst du, um die Regel fundiert zu prüfen?",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "UNICEF · UN-Kinderrechtskonvention",
+                  "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was bedeutet es, Kinder als Rechtsträger zu betrachten?",
+                  "a": "Ihre Rechte und ihre Perspektive werden eigenständig berücksichtigt."
+                }
+              ],
+              "quiz": {
+                "id": "kinderrechte-1-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "kinderrechte-1-q1",
+                    "title": "Welche Perspektive nimmt die Kinderrechtskonvention ein?",
+                    "type": "single",
+                    "explanation": "Die Rechte gelten für Kinder, nicht erst als Belohnung für bestimmtes Verhalten.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Kinder haben eigene Rechte",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Rechte hängen von guten Noten ab",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Nur Erwachsene dürfen Interessen vertreten",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "kinderrechte-2",
+              "title": "Beteiligung: Artikel 12",
+              "description": "Artikel 12 behandelt die Äußerung und Berücksichtigung der Meinung des Kindes. Eine eigene Meinung zu hören und die Entscheidung vollständig dem Kind zu überlassen sind unterschiedliche Dinge.",
+              "order": 2,
+              "minutes": 8,
+              "content": "Artikel 12 behandelt die Äußerung und Berücksichtigung der Meinung des Kindes. Eine eigene Meinung zu hören und die Entscheidung vollständig dem Kind zu überlassen sind unterschiedliche Dinge.\n\n## Fallbeispiel\nEine 13-Jährige möchte an der Planung eines Ausflugs beteiligt werden. Welche Entscheidungspunkte könnten gemeinsam besprochen werden? Wo bestehen organisatorische Grenzen?\n\n## Reflexionsfrage\nWie erfährt die Gruppe später, welchen Einfluss ihre Beiträge hatten?",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "UNICEF · UN-Kinderrechtskonvention",
+                  "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welcher Artikel behandelt die Berücksichtigung der Meinung des Kindes?",
+                  "a": "Artikel 12 der UN-Kinderrechtskonvention."
+                }
+              ],
+              "quiz": {
+                "id": "kinderrechte-2-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "kinderrechte-2-q1",
+                    "title": "Beteiligung bedeutet in dieser Übung …",
+                    "type": "single",
+                    "explanation": "Beteiligung verlangt ernsthafte Berücksichtigung; Entscheidungszuständigkeit und Grenzen bleiben transparent.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "jede Entscheidung allein Kindern übertragen",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Meinungen einholen, berücksichtigen und den Umgang damit erklären",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "nur die Erwachsenen abstimmen lassen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "kinderrechte-3",
+              "title": "Bildung und Würde",
+              "description": "Die Artikel 28 und 29 betreffen Bildung und Bildungsziele. Für den Lerntransfer betrachten wir, wie Regeln und Umgangsformen in einer Lerngruppe erlebt werden.",
+              "order": 3,
+              "minutes": 8,
+              "content": "Die Artikel 28 und 29 betreffen Bildung und Bildungsziele. Für den Lerntransfer betrachten wir, wie Regeln und Umgangsformen in einer Lerngruppe erlebt werden.\n\n## Fallbeispiel\nEin Schüler wird vor der gesamten Gruppe wegen einer falschen Antwort ausgelacht. Beschreibe die Handlung, die Reaktion der Gruppe und die mögliche Wirkung auf den Schüler.\n\n## Aufgabe\nFormuliere eine Alternative, die den Fehler zum Lernanlass macht und die Person respektiert.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "UNICEF · UN-Kinderrechtskonvention",
+                  "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche Artikel sind der Ausgangspunkt für Bildung und Bildungsziele?",
+                  "a": "Artikel 28 und 29 der UN-Kinderrechtskonvention."
+                }
+              ],
+              "quiz": {
+                "id": "kinderrechte-3-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "kinderrechte-3-q1",
+                    "title": "Welche Gestaltung unterstützt Lernen und Würde?",
+                    "type": "single",
+                    "explanation": "Die Übung verbindet die fachliche Rückmeldung mit einem respektvollen Umgang.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Fehler öffentlich als persönliche Schwäche darstellen",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Fehler sachlich besprechen und die Person respektieren",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Alle Fragen verbieten",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "kinderrechte-4",
+              "title": "Grenzverletzungen präzise beschreiben",
+              "description": "Für die Reflexion ist eine präzise Beschreibung hilfreicher als ein vorschnelles Etikett. Diese Lektion übt die Trennung von Sachverhalt und Bewertung; sie ersetzt keinen einrichtungsbezogenen Handlungsleitfaden.",
+              "order": 4,
+              "minutes": 8,
+              "content": "Für die Reflexion ist eine präzise Beschreibung hilfreicher als ein vorschnelles Etikett. Diese Lektion übt die Trennung von Sachverhalt und Bewertung; sie ersetzt keinen einrichtungsbezogenen Handlungsleitfaden.\n\n## Reflexionsraster\n- Welche konkrete Handlung ist bekannt?\n- Welche Perspektive hat das betroffene Kind?\n- Welche Information fehlt?\n- Welcher Rechtebezug muss geprüft werden?\n\n## Fallbeispiel\nEin 12-Jähriger berichtet, dass ein Erwachsener seine privaten Nachrichten in der Gruppe vorgelesen habe. Welche Fragen sind für eine sorgfältige Klärung offen?",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "UNICEF · UN-Kinderrechtskonvention",
+                  "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Wie wird eine Fallbeschreibung nachvollziehbar?",
+                  "a": "Konkrete Handlungen und Informationsquellen benennen, Deutungen als solche kennzeichnen."
+                }
+              ],
+              "quiz": {
+                "id": "kinderrechte-4-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "kinderrechte-4-q1",
+                    "title": "Was ist ein sinnvoller erster Schritt der Fallanalyse?",
+                    "type": "single",
+                    "explanation": "Eine sorgfältige Analyse kennzeichnet Beobachtungen, Berichte und offene Fragen.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Die Situation konkret beschreiben",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Eine ungesicherte Behauptung als Tatsache verbreiten",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Ohne weitere Information Schuld festlegen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "kinderrechte-5",
+              "title": "Vom Fall zur Seminarfrage",
+              "description": "Ein Fallbeispiel kann eine Diskussion eröffnen, ohne ein reales Kind zu identifizieren. Die folgenden Szenen sind erfunden und für gemeinsame Reflexion gedacht.",
+              "order": 5,
+              "minutes": 12,
+              "content": "Ein Fallbeispiel kann eine Diskussion eröffnen, ohne ein reales Kind zu identifizieren. Die folgenden Szenen sind erfunden und für gemeinsame Reflexion gedacht.\n\n## Gruppenarbeit\nEine Gruppe von Jugendlichen soll ihr Angebot mitgestalten. Ihre Vorschläge werden gesammelt, aber niemand erklärt, warum später ein anderes Angebot stattfindet.\n\n## Arbeitsauftrag\nUnterscheidet zwischen der angekündigten Beteiligung, dem tatsächlichen Einfluss und der Rückmeldung an die Gruppe. Formuliert eine konkrete Frage, die ihr der verantwortlichen Person stellen würdet.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "UNICEF · UN-Kinderrechtskonvention",
+                  "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche drei Aspekte betrachtet die Beteiligungsanalyse?",
+                  "a": "Ankündigung, tatsächlicher Einfluss und Rückmeldung."
+                }
+              ],
+              "quiz": {
+                "id": "kinderrechte-5-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 2,
+                "questions": [
+                  {
+                    "id": "kinderrechte-5-q1",
+                    "title": "Was fehlt im Fall besonders?",
+                    "type": "single",
+                    "explanation": "Ohne Rückmeldung bleibt unklar, wie die Beiträge der Jugendlichen berücksichtigt wurden.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Eine nachvollziehbare Rückmeldung zur Entscheidung",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Ein schöneres Plakat",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Eine strengere Anwesenheitsliste",
+                        "isCorrect": false
+                      }
+                    ]
+                  },
+                  {
+                    "id": "kinderrechte-5-q2",
+                    "title": "Welche Aspekte werden in der Beteiligungsanalyse betrachtet? Wähle alle passenden Antworten.",
+                    "type": "multiple",
+                    "explanation": "Ankündigung, tatsächlicher Einfluss und Rückmeldung bilden das Vergleichsraster.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Ankündigung der Beteiligung",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Tatsächlicher Einfluss",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Rückmeldung zur Entscheidung",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a3",
+                        "text": "Dekoration des Raums",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paedagogik",
+      "title": "Pädagogische Perspektiven",
+      "category": "Theorie & Transfer",
+      "description": "Montessori und Rousseau als Ausgangspunkte für deine erste Hausarbeit.",
+      "color": "blue",
+      "symbol": "⌁",
+      "status": "starter",
+      "modules": [
+        {
+          "id": "paedagogik-basis",
+          "title": "Grundlagen & Lerntransfer",
+          "lessons": [
+            {
+              "id": "paedagogik-1",
+              "title": "Theoretiker als Denkwerkzeug",
+              "description": "Für eine kurze Hausarbeit hilft eine klar begrenzte theoretische Perspektive. In diesem Kurs werden Montessori und Rousseau als Einstieg behandelt, nicht als vollständige Darstellung ihrer Werke.",
+              "order": 1,
+              "minutes": 8,
+              "content": "Für eine kurze Hausarbeit hilft eine klar begrenzte theoretische Perspektive. In diesem Kurs werden Montessori und Rousseau als Einstieg behandelt, nicht als vollständige Darstellung ihrer Werke.\n\n## Arbeitsfrage\nWelche Begriffe könnten helfen, eine schulische Situation zu untersuchen? Trenne den historischen Text von deiner heutigen Fragestellung.\n\n## Notiz\nLege eine Begriffsliste an und notiere zu jedem Begriff die konkrete Fundstelle in der Ausgabe, die du tatsächlich liest.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Worauf stützt du einen theoretischen Begriff?",
+                  "a": "Auf eine nachprüfbare Stelle in der tatsächlich verwendeten Ausgabe."
+                }
+              ],
+              "quiz": {
+                "id": "paedagogik-1-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "paedagogik-1-q1",
+                    "title": "Was gehört zu einer nachvollziehbaren Theoriearbeit?",
+                    "type": "single",
+                    "explanation": "Die konkrete Textgrundlage macht eine theoretische Aussage überprüfbar.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Ein Begriff mit nachprüfbarer Fundstelle",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Ein Zitat ohne Ausgabe",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Nur die Biografie des Autors",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "paedagogik-2",
+              "title": "Montessori: vorbereitete Umgebung",
+              "description": "Die vorbereitete Umgebung ist ein zentraler Begriff der Montessori-Pädagogik. Sie umfasst mehr als die Ausstattung eines Raums; auch die begleitenden Erwachsenen gehören dazu.",
+              "order": 2,
+              "minutes": 8,
+              "content": "Die vorbereitete Umgebung ist ein zentraler Begriff der Montessori-Pädagogik. Sie umfasst mehr als die Ausstattung eines Raums; auch die begleitenden Erwachsenen gehören dazu.\n\n## Beobachtungsübung\nBetrachte einen erfundenen Lernraum: Materialien sind sichtbar, aber Kinder müssen für jede Nutzung nachfragen. Welche Fragen entstehen zum Verhältnis von Umgebung und Selbstständigkeit?\n\n## Transferfrage\nWelche Bedingungen ermöglichen dem Kind eigenes Handeln? Begründe deine Überlegungen mit dem Begriff, nicht allein mit einer persönlichen Vorliebe.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "Montessori Deutschland · Glossar",
+                  "url": "https://montessori-deutschland.de/ueber-montessori/das-montessori-glossar"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was ist mehr als Raumgestaltung?",
+                  "a": "Montessoris vorbereitete Umgebung: auch Materialien und die Rolle der begleitenden Erwachsenen."
+                }
+              ],
+              "quiz": {
+                "id": "paedagogik-2-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "paedagogik-2-q1",
+                    "title": "Was gehört zur vorbereiteten Umgebung?",
+                    "type": "single",
+                    "explanation": "Der Begriff umfasst die Gestaltung und die Rolle der Erwachsenen.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Nur Möbel",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Raum, Materialien und die begleitenden Erwachsenen",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Nur ein Arbeitsblatt",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "paedagogik-3",
+              "title": "Rousseau: historische Texte lesen",
+              "description": "Rousseaus „Emil“ ist ein historischer pädagogischer Text. Eine heutige Kinderrechtsfrage muss deshalb als eigene Analysefrage kenntlich bleiben.",
+              "order": 3,
+              "minutes": 8,
+              "content": "Rousseaus „Emil“ ist ein historischer pädagogischer Text. Eine heutige Kinderrechtsfrage muss deshalb als eigene Analysefrage kenntlich bleiben.\n\n## Leseübung\nWähle einen kurzen Abschnitt aus der verlinkten historischen Übersetzung. Notiere: Was behauptet der Text? Welche Begründung gibt er? Welche Begriffe wirken heute fremd?\n\n## Kontextfrage\nWelche Grenzen hat es, diesen Text direkt auf eine heutige Schule zu übertragen? Die Übung verlangt zunächst Textverständnis, bevor du Zustimmung oder Kritik formulierst.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "Rousseau · Emil, erster Band (historische Übersetzung)",
+                  "url": "https://projekt-gutenberg.org/authors/jean-jacques-rousseau/books/emil-oder-ueber-die-erziehung-erster-band/chapter/2/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was trennst du bei einem historischen Text?",
+                  "a": "Textaussage, historischen Kontext und eigene heutige Interpretation."
+                }
+              ],
+              "quiz": {
+                "id": "paedagogik-3-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "paedagogik-3-q1",
+                    "title": "Wie liest du einen historischen Text wissenschaftlich?",
+                    "type": "single",
+                    "explanation": "Die Unterscheidung vermeidet, dem historischen Autor heutige Positionen zuzuschreiben.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Heutige Rechte dem Autor ohne Beleg zuschreiben",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Textaussage, Kontext und eigene Analyse unterscheiden",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Nur ein passendes Schlagwort suchen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "paedagogik-4",
+              "title": "Kinderrechte als heutige Vergleichsperspektive",
+              "description": "Montessori und Rousseau entwickelten ihre Überlegungen vor der Kinderrechtskonvention von 1989. Der Vergleich mit heutigen Kinderrechten ist deine analytische Perspektive.",
+              "order": 4,
+              "minutes": 8,
+              "content": "Montessori und Rousseau entwickelten ihre Überlegungen vor der Kinderrechtskonvention von 1989. Der Vergleich mit heutigen Kinderrechten ist deine analytische Perspektive.\n\n## Vergleichsraster\nUntersuche einen theoretischen Begriff mit drei Fragen: Welche Handlungsspielräume eröffnet er? Welche Rolle haben Erwachsene? Wo entstehen Spannungen zu Beteiligung?\n\n## Schreibübung\nFormuliere zwei Sätze: einen, der die Theorie beschreibt, und einen, der deine begründete Analyse aus Kinderrechtsperspektive enthält.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "UNICEF · UN-Kinderrechtskonvention",
+                  "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+                },
+                {
+                  "title": "Rousseau · Emil, erster Band (historische Übersetzung)",
+                  "url": "https://projekt-gutenberg.org/authors/jean-jacques-rousseau/books/emil-oder-ueber-die-erziehung-erster-band/chapter/2/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was ist beim Vergleich mit heutigen Kinderrechten kenntlich zu machen?",
+                  "a": "Dass der Rechtebezug die eigene heutige Analyseperspektive ist."
+                }
+              ],
+              "quiz": {
+                "id": "paedagogik-4-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "paedagogik-4-q1",
+                    "title": "Welche Aussage ist methodisch sauber?",
+                    "type": "single",
+                    "explanation": "Der heutige Maßstab wird transparent benannt und nicht dem historischen Autor zugeschrieben.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Die Konvention war Rousseaus eigener Maßstab",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Die Kinderrechtsperspektive ist mein heutiger Analysemaßstab",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Historische Texte benötigen keine Einordnung",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "paedagogik-5",
+              "title": "Eine kleine, bearbeitbare Fragestellung",
+              "description": "Eine Hausarbeit mit 10–12 Seiten braucht einen engen Fokus. Ein konkreter Begriff und ein klar abgegrenztes Praxisfeld sind leichter bearbeitbar als die gesamte Pädagogik.",
+              "order": 5,
+              "minutes": 12,
+              "content": "Eine Hausarbeit mit 10–12 Seiten braucht einen engen Fokus. Ein konkreter Begriff und ein klar abgegrenztes Praxisfeld sind leichter bearbeitbar als die gesamte Pädagogik.\n\n## Beispiel einer Arbeitsfrage\n„Welche Spannungen zwischen erwachsener Gestaltung und kindlicher Beteiligung lassen sich mit dem Begriff der vorbereiteten Umgebung im OGS-Alltag diskutieren?“\n\n## Prüfübung\nBenenne Theoriebegriff, Perspektive, Praxisfeld und eine Grenze dieser Frage. Die Formulierung ist ein Startvorschlag und keine bereits geprüfte Forschungsfrage.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche vier Elemente prüfen eine Arbeitsfrage?",
+                  "a": "Theoriebegriff, Analyseperspektive, Praxisfeld und Grenzen."
+                }
+              ],
+              "quiz": {
+                "id": "paedagogik-5-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "paedagogik-5-q1",
+                    "title": "Was begrenzt eine kurze Hausarbeit sinnvoll?",
+                    "type": "single",
+                    "explanation": "Ein enger Fokus schafft Raum für eine begründete Analyse statt oberflächlicher Aufzählung.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Alle Kinderrechte und alle Theoretiker vergleichen",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Einen Begriff in einem abgegrenzten Praxisfeld analysieren",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Möglichst viele Themenüberschriften sammeln",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wissenschaft",
+      "title": "Wissenschaftlich arbeiten",
+      "category": "Studienwerkstatt",
+      "description": "Von der Fragestellung über Literatur bis zum nachvollziehbaren Argument.",
+      "color": "sand",
+      "symbol": "↗",
+      "status": "starter",
+      "modules": [
+        {
+          "id": "wissenschaft-basis",
+          "title": "Grundlagen & Lerntransfer",
+          "lessons": [
+            {
+              "id": "wissenschaft-1",
+              "title": "Von einem Thema zu einer Frage",
+              "description": "„Kinderrechte“ ist ein Thema; eine Arbeitsfrage legt fest, was du daran untersuchen möchtest.",
+              "order": 1,
+              "minutes": 8,
+              "content": "„Kinderrechte“ ist ein Thema; eine Arbeitsfrage legt fest, was du daran untersuchen möchtest.\n\n## Eingrenzung\nSchreibe Thema, Perspektive und Praxisfeld getrennt auf. Kombiniere sie zu einer Frage, die im Umfang deiner Arbeit bearbeitbar ist.\n\n## Selbstcheck\nWelche Begriffe musst du definieren? Welche Literatur brauchst du? Was lässt du bewusst außerhalb der Arbeit? Notiere diese Grenzen, statt sie nur im Kopf zu behalten.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was macht eine Fragestellung bearbeitbar?",
+                  "a": "Ein begrenzter Fokus, definierbare Begriffe und erreichbare Literatur."
+                }
+              ],
+              "quiz": {
+                "id": "wissenschaft-1-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "wissenschaft-1-q1",
+                    "title": "Was unterscheidet eine Frage vom bloßen Thema?",
+                    "type": "single",
+                    "explanation": "Ein klarer Fokus steuert Auswahl, Recherche und Argumentation.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Sie legt einen Untersuchungsfokus fest",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Sie enthält möglichst viele Wörter",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Sie ersetzt die Recherche",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wissenschaft-2",
+              "title": "Literatur suchen und auswählen",
+              "description": "Die Hochschulbibliothek ist ein Ausgangspunkt für Fachliteratur. Ein Suchtreffer ist noch keine geprüfte Quelle.",
+              "order": 2,
+              "minutes": 8,
+              "content": "Die Hochschulbibliothek ist ein Ausgangspunkt für Fachliteratur. Ein Suchtreffer ist noch keine geprüfte Quelle.\n\n## Suchprotokoll\nNotiere Suchbegriffe, verwendeten Katalog und Gründe für die Auswahl eines Texts. Unterscheide theoretische Originaltexte, wissenschaftliche Diskussionen und allgemeine Informationsseiten.\n\n## Übung\nErstelle je eine Suchanfrage für Theoriebegriff, Praxisfeld und Analyseperspektive. Die hier verlinkten Materialien sind Einstiegspunkte; sie ersetzen keine systematische Literaturrecherche.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Literaturrecherche Sozialwissenschaften",
+                  "url": "https://www.th-nuernberg.de/einrichtungen-gesamt/administration-und-service/bibliothek/literaturrecherche/literatursuche-nach-fakultaeten/sozialwissenschaften/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche Angaben enthält ein Suchprotokoll?",
+                  "a": "Suchbegriffe, Rechercheort und Auswahlbegründungen."
+                }
+              ],
+              "quiz": {
+                "id": "wissenschaft-2-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "wissenschaft-2-q1",
+                    "title": "Was gehört zur begründeten Literaturauswahl?",
+                    "type": "single",
+                    "explanation": "Die Auswahl muss zur Arbeitsfrage passen und nachvollziehbar bleiben.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Nur der erste Suchtreffer",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Relevanz, Quellentyp und nachvollziehbare Auswahl",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Nur die Kürze des Texts",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wissenschaft-3",
+              "title": "Zitate und eigene Aussagen trennen",
+              "description": "Eine wissenschaftliche Argumentation macht sichtbar, welche Aussage aus einer Quelle stammt und welche Schlussfolgerung du selbst entwickelst.",
+              "order": 3,
+              "minutes": 8,
+              "content": "Eine wissenschaftliche Argumentation macht sichtbar, welche Aussage aus einer Quelle stammt und welche Schlussfolgerung du selbst entwickelst.\n\n## Markierübung\nMarkiere in einem eigenen Absatz drei Arten von Sätzen: direkte Wiedergabe, sinngemäße Wiedergabe und eigene Interpretation. Prüfe anschließend, ob die verwendeten Quellen und Fundstellen nachvollziehbar sind.\n\n## Arbeitsgrundlage\nNutze den Leitfaden deiner Fakultät und die konkreten Vorgaben deiner Lehrperson. Die Plattform legt keinen verbindlichen Zitierstil fest.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche Satzarten unterscheidet die Markierübung?",
+                  "a": "Direkte Wiedergabe, sinngemäße Wiedergabe und eigene Interpretation."
+                }
+              ],
+              "quiz": {
+                "id": "wissenschaft-3-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "wissenschaft-3-q1",
+                    "title": "Welche Aussage muss transparent werden?",
+                    "type": "single",
+                    "explanation": "Quellenwiedergabe und eigene Analyse müssen nachvollziehbar getrennt werden.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Nur die eigene Meinung",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Welche Gedanken aus Quellen stammen und welche von dir",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Nur der Titel der Arbeit",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wissenschaft-4",
+              "title": "Eine Argumentation aufbauen",
+              "description": "Ein überzeugender Absatz verbindet Aussage, Begründung und Bezug zur Frage. Eine Sammlung von Zitaten ist noch kein Argument.",
+              "order": 4,
+              "minutes": 8,
+              "content": "Ein überzeugender Absatz verbindet Aussage, Begründung und Bezug zur Frage. Eine Sammlung von Zitaten ist noch kein Argument.\n\n## Absatzwerkstatt\nSchreibe eine Aussage. Ergänze einen passenden Beleg. Erkläre danach in eigenen Worten, was der Beleg für deine Frage zeigt und was er offenlässt.\n\n## Gegenprobe\nKann eine andere Interpretation plausibel sein? Notiere sie und prüfe, wie weit deine Aussage tatsächlich reicht.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was gehört in einen argumentativen Absatz?",
+                  "a": "Aussage, Beleg und erklärte Verbindung zur Arbeitsfrage."
+                }
+              ],
+              "quiz": {
+                "id": "wissenschaft-4-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "wissenschaft-4-q1",
+                    "title": "Was verwandelt einen Beleg in ein Argument?",
+                    "type": "single",
+                    "explanation": "Erst die begründete Verbindung zur Frage trägt die Argumentation.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Die Erklärung seines Bezugs zur Frage",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Eine größere Schrift",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Viele weitere Zitate ohne Kommentar",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wissenschaft-5",
+              "title": "Überarbeiten und KI-Nutzung dokumentieren",
+              "description": "Die letzte Arbeitsphase prüft nicht nur Rechtschreibung. Frage auch, ob Gliederung, Begriffe, Belege und Schlussfolgerungen zusammenpassen.",
+              "order": 5,
+              "minutes": 12,
+              "content": "Die letzte Arbeitsphase prüft nicht nur Rechtschreibung. Frage auch, ob Gliederung, Begriffe, Belege und Schlussfolgerungen zusammenpassen.\n\n## Überarbeitungsdurchgänge\n- Argumentation und Bezug zur Frage.\n- Quellen und Literaturverzeichnis.\n- Sprache und Form.\n\n## KI-Werkzeuge\nDie Dokumentation richtet sich nach den Vorgaben der Hochschule und Lehrperson. Halte verwendete Werkzeuge und deren Funktion im Arbeitsprozess fest. Prüfe jede fachliche Aussage an geeigneten Quellen.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · KI-Nutzung dokumentieren",
+                  "url": "https://leko.service.th-nuernberg.de/owl/artikel/ki_nutzung_in_wissenschaftlichen_arbeiten_dokumentieren/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche Bereiche prüfst du vor der Abgabe?",
+                  "a": "Argumentation, Quellen, Sprache, Form und die geforderte Dokumentation der KI-Nutzung."
+                }
+              ],
+              "quiz": {
+                "id": "wissenschaft-5-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "wissenschaft-5-q1",
+                    "title": "Was gehört zur Überarbeitung?",
+                    "type": "single",
+                    "explanation": "Mehrere getrennte Durchgänge machen unterschiedliche Fehler sichtbar.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Nur das Deckblatt",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Argumentation, Quellen, Sprache und Form",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Alle Quellen entfernen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reflexion",
+      "title": "Praxis & Reflexion",
+      "category": "Lernmethoden",
+      "description": "Beobachtungen ordnen, Fragen entwickeln und Lernen bewusst gestalten.",
+      "color": "olive",
+      "symbol": "⌘",
+      "status": "starter",
+      "modules": [
+        {
+          "id": "reflexion-basis",
+          "title": "Grundlagen & Lerntransfer",
+          "lessons": [
+            {
+              "id": "reflexion-1",
+              "title": "Ein Lernjournal beginnen",
+              "description": "Ein Lernjournal ist ein Ort, an dem du Fragen und Veränderungen deines Verständnisses festhältst. Es ist kein lückenloser Tätigkeitsbericht.",
+              "order": 1,
+              "minutes": 8,
+              "content": "Ein Lernjournal ist ein Ort, an dem du Fragen und Veränderungen deines Verständnisses festhältst. Es ist kein lückenloser Tätigkeitsbericht.\n\n## Kurzer Eintrag\nWas habe ich heute verstanden? Was irritiert mich noch? Welche Verbindung sehe ich zu einem anonymisierten Praxisbeispiel?\n\n## Wiederlesen\nVergleiche einen späteren Eintrag mit einem früheren. Welche Begriffe verwendest du inzwischen präziser? Die privaten Notizen dieser Plattform unterstützen diesen Arbeitsprozess.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Welche drei Fragen helfen im Lernjournal?",
+                  "a": "Was ist klar geworden, was bleibt offen und welcher Praxisbezug entsteht?"
+                }
+              ],
+              "quiz": {
+                "id": "reflexion-1-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "reflexion-1-q1",
+                    "title": "Welche Frage unterstützt Reflexion?",
+                    "type": "single",
+                    "explanation": "Reflexion richtet den Blick auf das eigene Verständnis und dessen Veränderung.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Was habe ich anders verstanden als zuvor?",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Wie viele Seiten habe ich geöffnet?",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Wie schnell kann ich alles abhaken?",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "reflexion-2",
+              "title": "Anonymisierte Fälle für Lernzwecke",
+              "description": "Für Lernübungen lassen sich erfundene Fälle oder stark abstrahierte Situationen verwenden. In einem gemeinsamen Kursbereich haben identifizierende Angaben zu Kindern keinen Platz.",
+              "order": 2,
+              "minutes": 8,
+              "content": "Für Lernübungen lassen sich erfundene Fälle oder stark abstrahierte Situationen verwenden. In einem gemeinsamen Kursbereich haben identifizierende Angaben zu Kindern keinen Platz.\n\n## Übung\nErfinde eine kurze Situation mit einem Konflikt um Beteiligung. Verzichte auf reale Namen, Schule, konkrete Termine und Merkmale, die einzelne Personen erkennbar machen.\n\n## Reflexion\nWelche Angaben sind für deine Lernfrage wirklich nötig? Welche Details dienen nur einer anschaulichen Erzählung?",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "IFSW · Ethische Prinzipien",
+                  "url": "https://www.ifsw.org/global-social-work-statement-of-ethical-principles/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was gehört nicht in öffentliche Lernfälle?",
+                  "a": "Identifizierende Angaben und private Daten realer Personen."
+                }
+              ],
+              "quiz": {
+                "id": "reflexion-2-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "reflexion-2-q1",
+                    "title": "Welche Fallgestaltung passt in gemeinsame Lerninhalte?",
+                    "type": "single",
+                    "explanation": "Erfundene und nicht identifizierende Beispiele ermöglichen Diskussion ohne persönliche Daten.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Ein realer Name mit Schule",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Ein erfundenes, nicht identifizierendes Beispiel",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Private Nachrichten eines Kindes",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "reflexion-3",
+              "title": "Fragen an Daten stellen",
+              "description": "Bevor du eine Beobachtung als Ergebnis behandelst, prüfe, wie sie zustande gekommen ist. Unterschiedliche Erhebungsformen beantworten unterschiedliche Fragen.",
+              "order": 3,
+              "minutes": 8,
+              "content": "Bevor du eine Beobachtung als Ergebnis behandelst, prüfe, wie sie zustande gekommen ist. Unterschiedliche Erhebungsformen beantworten unterschiedliche Fragen.\n\n## Übung\nDu möchtest wissen, wie Jugendliche ein Angebot erleben. Vergleiche eine Frage mit vorgegebenen Antwortstufen und ein offenes Gespräch. Welche Informationen könnten jeweils entstehen?\n\n## Reflexion\nNotiere, welche Antwort du suchst, bevor du dich für eine Erhebungsform entscheidest. Diese Lektion ist eine Einstiegsübung, kein vollständiger Methodenkurs.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "ISB Bayern · Quantitative und qualitative Methoden",
+                  "url": "https://www.schulentwicklung.isb.bayern.de/qmbs/individualfeedback/feedbackmethoden/quantitativevsqualitativemethoden/"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was entscheidet über eine passende Erhebungsform?",
+                  "a": "Die Frage und die Art der dafür benötigten Informationen."
+                }
+              ],
+              "quiz": {
+                "id": "reflexion-3-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "reflexion-3-q1",
+                    "title": "Was steht vor der Wahl einer Methode?",
+                    "type": "single",
+                    "explanation": "Die Erkenntnisfrage steuert, welche Daten und Erhebungsform sinnvoll sind.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Die Frage, welche Information benötigt wird",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Die schönste Diagrammfarbe",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Ein vorab feststehendes Ergebnis",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "reflexion-4",
+              "title": "Aktiv erinnern statt nur wiederlesen",
+              "description": "Die Karteikarten in diesem Lernraum ermöglichen einen Selbsttest: Formuliere zunächst eine Antwort und decke erst danach die Rückseite auf.",
+              "order": 4,
+              "minutes": 8,
+              "content": "Die Karteikarten in diesem Lernraum ermöglichen einen Selbsttest: Formuliere zunächst eine Antwort und decke erst danach die Rückseite auf.\n\n## Lernexperiment\nLies einen kurzen Abschnitt. Schließe ihn und erkläre einen zentralen Begriff in eigenen Worten. Vergleiche anschließend mit dem Text.\n\n## Selbsteinschätzung\n„Nochmal“ bedeutet: Die Karte kommt bald wieder. „Schwer“ und „Gewusst“ verschieben den nächsten Termin. Die Terminierung ist eine einfache Lernhilfe, keine wissenschaftlich validierte Diagnose deines Wissens.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Wie läuft der Selbsttest ab?",
+                  "a": "Antwort selbst formulieren, aufdecken, vergleichen und einschätzen."
+                }
+              ],
+              "quiz": {
+                "id": "reflexion-4-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "reflexion-4-q1",
+                    "title": "Wie nutzt du die Karteikarte für einen Selbsttest?",
+                    "type": "single",
+                    "explanation": "Die eigene Antwort macht sichtbar, was du ohne Vorlage abrufen kannst.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Zuerst eine eigene Antwort versuchen",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Nur die Rückseite lesen",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Die Bewertung zufällig anklicken",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "reflexion-5",
+              "title": "Einen realistischen Lernplan führen",
+              "description": "Ein Lernplan zerlegt größere Vorhaben in konkrete Arbeitsschritte. Der Plan in dieser Plattform speichert Aufgaben und selbst eingetragene Termine.",
+              "order": 5,
+              "minutes": 12,
+              "content": "Ein Lernplan zerlegt größere Vorhaben in konkrete Arbeitsschritte. Der Plan in dieser Plattform speichert Aufgaben und selbst eingetragene Termine.\n\n## Beispiel\nAus „Hausarbeit schreiben“ werden „Frage formulieren“, „zwei Texte sichten“ und „einen Absatz entwerfen“.\n\n## Wochenrückblick\nWelche Aufgabe ist erledigt? Welche war zu groß? Was braucht einen anderen Termin? Der Lernplan enthält keine offiziellen Prüfungsfristen; trage verbindliche Termine selbst ein.",
+              "reflection": "Welche Verbindung siehst du zu deiner Lernfrage oder einem erfundenen Praxisbeispiel? Halte eine offene Frage in deinen privaten Notizen fest.",
+              "sources": [
+                {
+                  "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+                  "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+                }
+              ],
+              "flashcards": [
+                {
+                  "q": "Was macht eine Lernaufgabe konkret?",
+                  "a": "Eine beschriebene Tätigkeit mit begrenztem Umfang und überprüfbarem Ergebnis."
+                }
+              ],
+              "quiz": {
+                "id": "reflexion-5-quiz",
+                "title": "Wissenscheck",
+                "passingScore": 1,
+                "questions": [
+                  {
+                    "id": "reflexion-5-q1",
+                    "title": "Welche Aufgabe ist konkret bearbeitbar?",
+                    "type": "single",
+                    "explanation": "Eine konkrete Tätigkeit hat einen nachvollziehbaren Umfang und ein erkennbares Ergebnis.",
+                    "answers": [
+                      {
+                        "id": "a0",
+                        "text": "Alles fürs Studium schaffen",
+                        "isCorrect": false
+                      },
+                      {
+                        "id": "a1",
+                        "text": "Zwei passende Texte sichten und Auswahl notieren",
+                        "isCorrect": true
+                      },
+                      {
+                        "id": "a2",
+                        "text": "Irgendwann mehr lernen",
+                        "isCorrect": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "title": "IFSW · Definition Sozialer Arbeit",
+      "url": "https://www.ifsw.org/what-is-social-work/global-definition-of-social-work/"
+    },
+    {
+      "title": "IFSW · Ethische Prinzipien",
+      "url": "https://www.ifsw.org/global-social-work-statement-of-ethical-principles/"
+    },
+    {
+      "title": "UNICEF · UN-Kinderrechtskonvention",
+      "url": "https://www.unicef.de/informieren/ueber-uns/fuer-kinderrechte/un-kinderrechtskonvention"
+    },
+    {
+      "title": "Montessori Deutschland · Glossar",
+      "url": "https://montessori-deutschland.de/ueber-montessori/das-montessori-glossar"
+    },
+    {
+      "title": "Rousseau · Emil, erster Band (historische Übersetzung)",
+      "url": "https://projekt-gutenberg.org/authors/jean-jacques-rousseau/books/emil-oder-ueber-die-erziehung-erster-band/chapter/2/"
+    },
+    {
+      "title": "TH Nürnberg · Leitfaden wissenschaftliches Arbeiten, Fakultät SW",
+      "url": "https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SW/SW_1171_HR_Leitfaden-wissenschaftliches-Arbeiten_public.pdf"
+    },
+    {
+      "title": "TH Nürnberg · Literaturrecherche Sozialwissenschaften",
+      "url": "https://www.th-nuernberg.de/einrichtungen-gesamt/administration-und-service/bibliothek/literaturrecherche/literatursuche-nach-fakultaeten/sozialwissenschaften/"
+    },
+    {
+      "title": "TH Nürnberg · KI-Nutzung dokumentieren",
+      "url": "https://leko.service.th-nuernberg.de/owl/artikel/ki_nutzung_in_wissenschaftlichen_arbeiten_dokumentieren/"
+    },
+    {
+      "title": "ISB Bayern · Quantitative und qualitative Methoden",
+      "url": "https://www.schulentwicklung.isb.bayern.de/qmbs/individualfeedback/feedbackmethoden/quantitativevsqualitativemethoden/"
+    }
+  ]
+}

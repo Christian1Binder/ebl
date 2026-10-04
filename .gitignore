@@ -3,3 +3,4 @@ node_modules/
 api/config.local.php
 storage/
 test-results/
+_site/

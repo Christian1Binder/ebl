@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {validateCatalog,allLessons,grade,percent,reviewCard,safeURL} from '../js/model.js';
+import {esc,markdown} from '../js/render.js';
+const data=JSON.parse(fs.readFileSync(new URL('../data/catalog.json',import.meta.url)));
+test('Startkatalog: fünf Kurse mit je fünf vollständigen Lektionen',()=>{validateCatalog(data);assert.equal(data.courses.length,5);for(const c of data.courses)assert.equal(c.modules.flatMap(m=>m.lessons).length,5);for(const l of allLessons(data)){assert(l.content);assert(l.flashcards.length);assert(l.quiz.questions.length);}});
+test('Quiz wertet Single und Multiple als exakte Mengen',()=>{const multiple=allLessons(data).flatMap(l=>l.quiz.questions).find(q=>q.type==='multiple');const correct=multiple.answers.filter(a=>a.isCorrect).map(a=>a.id);assert(grade(multiple,correct));assert(grade(multiple,[...correct].reverse()));assert(!grade(multiple,correct.slice(1)));assert(!grade(multiple,[...correct,multiple.answers.find(a=>!a.isCorrect).id]));});
+test('Fortschritt ignoriert entfernte und andere Lektionen',()=>{assert.equal(percent(data.courses[0],{'soziale-arbeit-1':true,'unbekannt':true}),20);assert.equal(percent({...data.courses[0],modules:[]},{}),0);});
+test('Import verweigert doppelte IDs und widersprüchliche Single-Fragen',()=>{const copy=structuredClone(data);copy.courses[1].id=copy.courses[0].id;assert.throws(()=>validateCatalog(copy),/eindeutig/);const second=structuredClone(data);second.courses[0].modules[0].lessons[0].quiz.questions[0].answers[1].isCorrect=true;assert.throws(()=>validateCatalog(second),/genau eine/);});
+test('passingScore ist eine Mindestanzahl, keine Prozentzahl',()=>{const copy=structuredClone(data);copy.courses[0].modules[0].lessons[0].quiz.passingScore=80;assert.throws(()=>validateCatalog(copy),/passingScore/);});
+test('Wiederholungstermine wachsen begrenzt und bleiben für Nochmal kurz',()=>{assert.deepEqual(reviewCard({},'again',100),{interval:0,due:600100,reviews:1});assert.equal(reviewCard({interval:40,reviews:5},'good',0).interval,60);assert.equal(reviewCard({},'hard',0).due,86400000);});
+test('Importtexte und Quellen können kein aktives HTML ausführen',()=>{assert(!markdown('<img src=x onerror=alert(1)>').includes('<img'));assert.equal(safeURL('javascript:alert(1)'),null);assert.equal(safeURL('data:text/html,x'),null);assert.equal(esc('" onclick="x'),'&quot; onclick=&quot;x');});
