@@ -6,7 +6,7 @@ PHP 8.2+ mit `pdo_mysql`, `mbstring`, `json` und Sessions; MySQL 8+ oder MariaDB
 
 ## Installation mit SSH/CLI
 
-1. Laufzeitdateien `index.html`, `assets`, `js`, `data`, `api` und die jeweiligen `.htaccess`-Dateien auf den Webspace kopieren. `database` kann für die Installation außerhalb des öffentlichen Webroots liegen; danach vom öffentlichen Webspace entfernen. `docs`, `tests`, `.github`, `node_modules` und Testartefakte gehören nicht auf den öffentlichen Webspace.
+1. Laufzeitdateien `index.html`, `assets`, `js`, `data`, `api` und die jeweiligen `.htaccess`-Dateien auf den Webspace kopieren. `database` für die Installation neben `api` belassen (die mitgelieferte `.htaccess` sperrt den HTTP-Zugriff); nach der Installation vom öffentlichen Webspace entfernen. Ein Verschieben an einen anderen Ort erfordert angepasste Pfade und ist für diese Anleitung nicht vorgesehen. `docs`, `tests`, `.github`, `node_modules` und Testartefakte gehören nicht auf den öffentlichen Webspace.
 2. Leere Datenbank mit einem eigenen Datenbankbenutzer erstellen.
 3. `api/config.example.php` nach `api/config.local.php` kopieren und Verbindungswerte eintragen, oder die dokumentierten `EBL_DB_*`-Umgebungsvariablen verwenden. Die Datei nie in Git einchecken. `secure_cookies` bleibt produktiv `true`.
 4. Über SSH im Projektordner installieren:
@@ -22,9 +22,19 @@ unset EBL_ADMIN_PASSWORD
 6. Über HTTPS öffnen und mit dem angelegten Konto anmelden. In „Mein Lernraum → Lerngruppe verwalten“ weitere Konten anlegen.
 7. Bisherige Inhalte über Katalogexport/-import übernehmen. Jede Person importiert ihr eigenes persönliches Backup separat. Kein gemeinsames persönliches Backup verwenden.
 
-## Webspace ohne SSH
+## Webspace ohne SSH: Einrichtung im Browser
 
-Schema aus `database/schema.sql` über phpMyAdmin importieren. Admin-Konto und Startkatalog müssen anschließend einmalig über eine vertrauenswürdige lokale PHP-Umgebung oder ein nicht öffentliches Hostingwerkzeug eingerichtet werden. Passworthash mit `password_hash($password, PASSWORD_DEFAULT)` erstellen; keinen Hash-Onlinedienst nutzen. Es gibt bewusst keinen ungeschützten Setup-Endpunkt. Der bereitgestellte Installer ist per HTTP nicht ausführbar.
+1. Dateien und Serverkonfiguration wie oben bereitstellen; zusätzlich vorübergehend `database` und `api/setup.php` hochladen. `database/keygen.html` bleibt ausschließlich auf deinem Computer.
+2. `database/keygen.html` lokal doppelklicken und „Zufälligen Schlüssel erzeugen“ wählen. Die Datei benötigt keine Zusatzinstallation und sendet keine Daten.
+3. Den erzeugten **setup-Konfigurationsblock mit dem Hash** in `api/config.local.php` einsetzen. Den eigentlichen geheimen Schlüssel separat bereithalten. Keinen Einrichtungsschlüssel in eine URL, GitHub oder einen Chat kopieren.
+4. `https://DEINE-DOMAIN/ebl/api/setup.php` öffnen (bei Installation im Hauptverzeichnis `/ebl` weglassen). Einrichtungsschlüssel, Admin-Namen, Admin-E-Mail und ein eigenes Passwort eingeben und absenden.
+5. Der Installer legt die vier Tabellen, den Startkatalog und genau das erste Admin-Konto an. Ein vorhandener Katalog wird nicht überschrieben. Sind bereits Nutzer vorhanden, wird eine erneute Browserinstallation mit HTTP 410 abgewiesen.
+6. `setup.enabled` wieder auf `false` setzen und `setup.token_hash` leeren. `api/setup.php` und den gesamten Ordner `database` vom Webspace löschen. Die Kopien im heruntergeladenen Projekt behalten.
+7. `js/config.js` auf `backend: 'php'` umstellen, per HTTPS öffnen und anmelden.
+
+Ein manueller SQL-Import ist bei diesem Weg nicht erforderlich. Falls der Hoster Tabellen nur über phpMyAdmin anlegen lässt: richtige Datenbank wählen, unter **Importieren** `database/schema.sql` importieren und anschließend dieselbe geschützte Browserinstallation für Startkatalog und Admin nutzen. `CREATE TABLE IF NOT EXISTS` belässt vorhandene Tabellen; es ist kein Schema-Migrationswerkzeug für inkompatible Altversionen.
+
+Eine funktionierende HTTPS-Erkennung ist Voraussetzung. Bei einem vorgeschalteten TLS-Proxy muss der Hoster PHP das HTTPS-Signal korrekt bereitstellen. Sichere Cookies nicht für den produktiven Betrieb abschalten.
 
 ## Rechte und Sitzungen
 

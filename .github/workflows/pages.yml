@@ -42,10 +42,12 @@ jobs:
         run: |
           cp api/config.example.php api/config.local.php
           php database/install.php --name="CI Admin" --email="admin@example.test"
+          php database/check.php
       - name: API, Rollen und private Daten testen
         run: |
           php -S 127.0.0.1:8080 -t . > /tmp/ebl-php.log 2>&1 &
           node tests/api.mjs
+          node tests/setup.mjs
       - name: Browserprüfungen installieren
         run: npm install --no-save --package-lock=false playwright@1.58.2 && npx playwright install --with-deps chromium
       - name: Lernabläufe und mobile Ansicht testen

@@ -13,4 +13,10 @@ return [
     // Auf produktivem Webspace immer true; false nur für lokale HTTP-Tests.
     'secure_cookies' => getenv('EBL_LOCAL_HTTP') !== '1',
     'session_timeout' => 7200,
+    // Nur für die einmalige Browserinstallation ohne SSH aktivieren.
+    // Gespeichert wird der SHA-256-Hash eines zufälligen 64-Zeichen-Schlüssels.
+    'setup' => [
+        'enabled' => getenv('EBL_SETUP_ENABLED') === '1',
+        'token_hash' => getenv('EBL_SETUP_TOKEN_HASH') ?: '',
+    ],
 ];

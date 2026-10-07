@@ -65,6 +65,7 @@ GitHub Pages ist aktiviert. Die Action `.github/workflows/pages.yml` veröffentl
 
 ## Dokumentation
 
-- [PHP/MySQL-Umzug](docs/WEBSPACE.md)
+- [Schritt-für-Schritt-Implementierung](docs/IMPLEMENTIERUNG.md)
+- [PHP/MySQL-Umzug und API](docs/WEBSPACE.md)
 - [Datenmodell und Import](docs/DATENFORMAT.md)
 - [Ausbau und Grenzen](docs/AUSBAU.md)
