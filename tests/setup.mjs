@@ -15,7 +15,9 @@ try{
   assert.equal((await request({...body,csrf:'wrong'})).status,403);
   assert.equal((await request({...body,repeat:'different-password'})).status,400);
   assert.equal((await request(body)).status,201);
-  assert.equal((await request(body)).status,410);
+  const again=await request();
+  const nextCsrf=again.text.match(/name="csrf" value="([a-f0-9]+)"/)[1];
+  assert.equal((await request({...body,csrf:nextCsrf})).status,410);
   const check=spawnSync('php',['database/check.php'],{env,encoding:'utf8'});assert.equal(check.status,0,check.stderr);
   const duplicate=spawnSync('php',['database/install.php','--name=Other','--email=setup@example.test'],{env:{...env,EBL_ADMIN_PASSWORD:'other-test-password'},encoding:'utf8'});assert.equal(duplicate.status,1);assert(duplicate.stderr.includes('existiert bereits'));
   // Ein wiederholter Versuch darf das erste Passwort nicht ersetzen.
