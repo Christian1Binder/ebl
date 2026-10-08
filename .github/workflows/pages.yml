@@ -38,6 +38,8 @@ jobs:
         run: npm run check && npm test
       - name: PHP prüfen
         run: find api database -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: STRATO-Deployment-Logik prüfen
+        run: python3 -m unittest discover -s tests -p 'test_strato.py'
       - name: Testdatenbank einrichten
         run: |
           cp api/config.example.php api/config.local.php

@@ -1,0 +1,50 @@
+name: STRATO per SFTP
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'inspect: nur prüfen; bootstrap: Erstinstallation; finish: Installer entfernen; deploy: Update'
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, bootstrap, finish, deploy]
+      target:
+        description: 'SFTP-Ziel (erst inspect ausführen; bei eingeschränktem Zugang meist .)'
+        required: true
+        default: '.'
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: ebl-strato
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Quellen und Deployment prüfen
+        run: |
+          npm run check
+          npm test
+          find api database -name '*.php' -print0 | xargs -0 -n1 php -l
+          python -m unittest discover -s tests -p 'test_strato.py'
+      - name: SFTP-Bibliothek installieren
+        run: python -m pip install --disable-pip-version-check paramiko==4.0.0
+      - name: Ziel prüfen und gewählte Aktion ausführen
+        env:
+          STRATO_MODE: ${{ inputs.mode }}
+          STRATO_TARGET: ${{ inputs.target }}
+          STRATO_SFTP_PASSWORD: ${{ secrets.STRATO_SFTP_PASSWORD }}
+          STRATO_KNOWN_HOSTS: ${{ secrets.STRATO_KNOWN_HOSTS }}
+          STRATO_DB_PASSWORD: ${{ secrets.STRATO_DB_PASSWORD }}
+          EBL_SETUP_TOKEN: ${{ secrets.EBL_SETUP_TOKEN }}
+        run: python scripts/strato.py

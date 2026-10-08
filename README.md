@@ -65,6 +65,8 @@ GitHub Pages ist aktiviert. Die Action `.github/workflows/pages.yml` veröffentl
 
 ## Dokumentation
 
+- [STRATO-Upload über GitHub Actions](docs/STRATO.md)
+
 - [Schritt-für-Schritt-Implementierung](docs/IMPLEMENTIERUNG.md)
 - [PHP/MySQL-Umzug und API](docs/WEBSPACE.md)
 - [Datenmodell und Import](docs/DATENFORMAT.md)
